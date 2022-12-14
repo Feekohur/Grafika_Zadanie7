@@ -1,0 +1,33 @@
+﻿<Window x:Class="Grafika_Zadanie7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grafika_Zadanie7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ToolBar>
+            <Button Click="Button_Click">Wczytaj obraz</Button>
+            <Button Click="Button_Click_1">Dokonaj analizy</Button>
+        </ToolBar>
+        <Image Grid.Row="1" Name="BitmapI" Margin="5"></Image>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Procent terenu zielonego:</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Name="Percent"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">Największa grupa pikseli:</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Name="Group"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
